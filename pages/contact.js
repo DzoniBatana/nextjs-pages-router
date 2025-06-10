@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useState } from 'react';
 
 export default function Contact() {
@@ -6,6 +7,12 @@ export default function Contact() {
   const [message, setMessage] = useState('');
 
   return (
+    <>
+
+    <Head>
+  <title>Contact / The wild Oasis</title>
+      
+    </Head>
     <div>
       <h1 className='text-4xl mb-8 text-accent-400 font-medium'>
         Any question? Shoot us a message
@@ -18,7 +25,7 @@ export default function Contact() {
             required
             className='px-5 py-3 bg-primary-200 text-primary-800 w-full shadow-sm rounded-sm'
             name='fullName'
-          />
+            />
         </div>
 
         <div className='space-y-2'>
@@ -28,7 +35,7 @@ export default function Contact() {
             name='email'
             required
             className='px-5 py-3 bg-primary-200 text-primary-800 w-full shadow-sm rounded-sm'
-          />
+            />
         </div>
 
         <div className='space-y-2'>
@@ -37,7 +44,7 @@ export default function Contact() {
             required
             name='subject'
             className='px-5 py-3 bg-primary-200 text-primary-800 w-full shadow-sm rounded-sm'
-          >
+            >
             <option value=''>Select subject...</option>
             <option value='booking-enquiry'>Booking enquiry</option>
             <option value='cabin-information'>Cabin information</option>
@@ -51,7 +58,7 @@ export default function Contact() {
             name='message'
             className='px-5 py-3 bg-primary-200 text-primary-800 w-full shadow-sm rounded-sm'
             rows={3}
-          />
+            />
         </div>
 
         <div className='flex justify-between items-center text-red-500'>
@@ -61,5 +68,6 @@ export default function Contact() {
         </div>
       </form>
     </div>
+            </>
   );
 }

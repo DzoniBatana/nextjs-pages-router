@@ -2,9 +2,16 @@ import Image from 'next/image';
 import image1 from '@/public/about-1.jpg';
 import image2 from '@/public/about-2.jpg';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function About() {
   return (
+<>
+<Head>
+  <title>About / The wild Oasis</title>
+
+</Head>
+
     <div className='grid grid-cols-5 gap-x-24 gap-y-32 text-lg items-center'>
       <div className='col-span-3'>
         <h1 className='text-4xl mb-10 text-accent-400 font-medium'>
@@ -39,7 +46,7 @@ export default function About() {
           alt='Family sitting around a fire pit in front of cabin'
           placeholder='blur'
           quality={80}
-        />
+          />
       </div>
 
       <div className='relative aspect-square col-span-2'>
@@ -48,7 +55,7 @@ export default function About() {
           fill
           className='object-cover'
           alt='Family that manages The Wild Oasis'
-        />
+          />
       </div>
 
       <div className='col-span-3'>
@@ -76,12 +83,13 @@ export default function About() {
             <Link
               href='/cabins'
               className='inline-block mt-4 bg-accent-500 px-8 py-5 text-primary-800 text-lg font-semibold hover:bg-accent-600 transition-all'
-            >
+              >
               Explore our luxury cabins
             </Link>
           </div>
         </div>
       </div>
     </div>
+              </>
   );
 }
